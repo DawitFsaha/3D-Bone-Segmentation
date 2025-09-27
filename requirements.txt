@@ -1,0 +1,43 @@
+# 3D Bone Segmentation Project Dependencies
+# Medical imaging and visualization project for bone segmentation from CT scans
+
+# Core scientific computing
+numpy>=1.21.0
+scipy>=1.7.0
+
+# Image processing and computer vision
+SimpleITK>=2.1.0
+scikit-image>=0.18.0
+
+# GUI Framework
+PyQt5>=5.15.0
+
+# 3D Visualization
+mayavi>=4.7.0
+vtk>=9.0.0
+
+# VTK utilities for data conversion
+vtk-util
+
+# Mesh processing and STL export
+numpy-stl>=2.16.0
+
+# Additional visualization support
+traits>=6.2.0
+traitsui>=7.2.0
+pyface>=7.3.0
+
+# Qt-based scene editor for Mayavi
+tvtk>=9.0.0
+
+# For enhanced data handling and interpolation
+# (scipy already included above covers ndimage)
+
+# Optional: For enhanced performance with large datasets
+# Uncomment if needed for your specific use case
+# h5py>=3.1.0
+# tables>=3.6.0
+
+# Development and debugging (optional)
+# matplotlib>=3.3.0  # For additional plotting if needed
+# pillow>=8.0.0      # For image format support if needed
