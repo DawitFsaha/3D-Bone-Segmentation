@@ -4,18 +4,6 @@ A comprehensive medical imaging application developed as part of an MSc thesis i
 
 ## Screenshots
 
-### Application Interface
-![Application UI](docs/UI.png)
-
-### Segmentation Workflow
-![Segmentation Workflow](docs/Segmenttion%20workflow.png)
-
-### System Flowchart
-![System Flowchart](docs/flowchart.png)
-
-### 3D Printed Result
-![3D Printed Spine Model](docs/3D-printed%20spine.png)
-
 ## 🎓 Academic Background
 
 This software was developed as the core component of a Master's thesis in **Biomedical Engineering** with the topic:
@@ -70,6 +58,16 @@ One of the most valuable features is the software's ability to **automatically c
 - **3D Printing Ready**: Optimized for transparent materials to visualize internal structures
 - **Clinical Scale**: Tested with medium bone fractures up to 30 cm dimensions
 - **Processed Data**: Export with applied windowing, thresholding, and ROI selections
+
+### Application Interface
+![Application UI](docs/UI.png)
+
+### System Flowchart
+![System Flowchart](docs/flowchart.png)
+
+### 3D Printed Result
+![3D Printed Spine Model](docs/3D-printed%20spine.png)
+
 
 ## Installation
 
