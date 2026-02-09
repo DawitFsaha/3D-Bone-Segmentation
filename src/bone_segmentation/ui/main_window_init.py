@@ -4,9 +4,9 @@ from PyQt5.QtWidgets import (QMainWindow, QAction, QVBoxLayout,
                              QHBoxLayout, QGridLayout, QWidget, QPushButton,
                              QScrollBar, QSplitter, QFrame, QSlider, QLabel, QComboBox)
 from PyQt5.QtCore import Qt
-from image_viewer import ImageViewer
-from windowing_tool import WindowingTool
-from main_window_functions import MainWindowFunctions
+from bone_segmentation.ui.image_viewer import ImageViewer
+from bone_segmentation.ui.windowing_tool import WindowingTool
+from bone_segmentation.ui.main_window_functions import MainWindowFunctions
 
 
 class MainWindow(QMainWindow):

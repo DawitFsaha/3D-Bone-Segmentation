@@ -1,12 +1,14 @@
 # main_window_functions.py
 
-from image_processing import load_image, load_image_series, get_slice, apply_threshold, adjust_contrast, \
+from bone_segmentation.core.image_processing import (
+    load_image, load_image_series, get_slice, apply_threshold, adjust_contrast,
     create_qimage_from_slice, apply_windowing, apply_gaussian_filter, apply_median_filter
+)
 from PyQt5.QtWidgets import QFileDialog, QMessageBox, QInputDialog, QVBoxLayout, QMainWindow, QApplication
 from PyQt5.QtCore import QRectF, QTimer
 import SimpleITK as sitk
 import numpy as np
-from mayavi_widget import MayaviQWidget
+from bone_segmentation.visualization.mayavi_widget import MayaviQWidget
 import traceback
 import vtk
 from stl import mesh

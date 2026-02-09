@@ -1,10 +1,26 @@
 #main.py
-import sys
-from PyQt5.QtWidgets import QApplication
-from main_window_init import MainWindow
+"""
+Bone Segmentation 3D - Medical Imaging Application
 
-if __name__ == '__main__':
+Entry point for the application.
+"""
+import sys
+import os
+
+# Add src directory to path for package imports
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
+
+from PyQt5.QtWidgets import QApplication
+from bone_segmentation.ui.main_window_init import MainWindow
+
+
+def main():
+    """Main entry point for the application."""
     app = QApplication(sys.argv)
     mainWin = MainWindow()
     mainWin.show()
-    sys.exit(app.exec_())
+    return app.exec_()
+
+
+if __name__ == '__main__':
+    sys.exit(main())

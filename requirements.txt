@@ -16,9 +16,6 @@ PyQt5>=5.15.0
 mayavi>=4.7.0
 vtk>=9.0.0
 
-# VTK utilities for data conversion
-vtk-util
-
 # Mesh processing and STL export
 numpy-stl>=2.16.0
 
@@ -26,9 +23,6 @@ numpy-stl>=2.16.0
 traits>=6.2.0
 traitsui>=7.2.0
 pyface>=7.3.0
-
-# Qt-based scene editor for Mayavi
-tvtk>=9.0.0
 
 # For enhanced data handling and interpolation
 # (scipy already included above covers ndimage)

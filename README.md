@@ -2,6 +2,20 @@
 
 A comprehensive medical imaging application developed as part of an MSc thesis in Biomedical Engineering, enabling surgeons to create patient-specific 3D bone models from CT scans for enhanced preoperative planning and surgical training.
 
+## Screenshots
+
+### Application Interface
+![Application UI](docs/UI.png)
+
+### Segmentation Workflow
+![Segmentation Workflow](docs/Segmenttion%20workflow.png)
+
+### System Flowchart
+![System Flowchart](docs/flowchart.png)
+
+### 3D Printed Result
+![3D Printed Spine Model](docs/3D-printed%20spine.png)
+
 ## 🎓 Academic Background
 
 This software was developed as the core component of a Master's thesis in **Biomedical Engineering** with the topic:
@@ -60,19 +74,44 @@ One of the most valuable features is the software's ability to **automatically c
 ## Installation
 
 ### Prerequisites
-- Python 3.8 or higher
-- Windows/macOS/Linux operating system
+- Python 3.10 or higher (3.10 recommended)
+- Anaconda or Miniconda (recommended for Mayavi dependencies)
 - OpenGL support for 3D visualization
 
-### Setup Instructions
+### Setup Instructions (Recommended - Conda)
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/Bone_Segmentation-3D.git
-   cd Bone_Segmentation-3D
+   git clone https://github.com/yourusername/3D-Bone-Segmentation.git
+   cd 3D-Bone-Segmentation
    ```
 
-2. **Create virtual environment** (recommended)
+2. **Create conda environment**
+   ```bash
+   conda create -n bone3d python=3.10 -y
+   conda activate bone3d
+   ```
+
+3. **Install Mayavi and VTK via conda-forge**
+   ```bash
+   conda install -c conda-forge mayavi vtk pyqt -y
+   ```
+
+4. **Install remaining dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+5. **Run the application**
+   ```bash
+   # On Windows, you may need to set QT_PLUGIN_PATH
+   python main.py
+   ```
+
+### Alternative Setup (pip only)
+Note: pip installation of Mayavi may fail on Windows due to VTK build issues.
+
+1. **Create virtual environment**
    ```bash
    python -m venv venv
    
@@ -83,12 +122,12 @@ One of the most valuable features is the software's ability to **automatically c
    source venv/bin/activate
    ```
 
-3. **Install dependencies**
+2. **Install dependencies**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Run the application**
+3. **Run the application**
    ```bash
    python main.py
    ```
@@ -144,18 +183,36 @@ One of the most valuable features is the software's ability to **automatically c
 ## Project Structure
 
 ```
-Bone_Segmentation-3D/
-├── main.py                    # Application entry point
-├── main_window_init.py        # Main UI initialization
-├── main_window_functions.py   # Core application logic
-├── image_viewer.py           # Multi-planar image display
-├── image_processing.py       # Medical image processing utilities
-├── mayavi_widget.py          # 3D visualization component
-├── enhanced_mayavi_widget.py # Advanced density visualization
-├── windowing_tool.py         # Medical windowing controls
-├── requirements.txt          # Python dependencies
-├── dataset/                  # Sample CT data
-└── README.md                # This file
+3D-Bone-Segmentation/
+├── main.py                           # Application entry point
+├── pyproject.toml                    # Modern Python project configuration
+├── setup.py                          # Package installation script
+├── requirements.txt                  # Python dependencies
+├── README.md                         # This file
+├── LICENSE                           # MIT License
+├── src/                              # Source code directory
+│   └── bone_segmentation/            # Main package
+│       ├── __init__.py               # Package initialization
+│       ├── core/                     # Core processing modules
+│       │   ├── __init__.py
+│       │   └── image_processing.py   # Medical image processing utilities
+│       ├── ui/                       # User interface modules
+│       │   ├── __init__.py
+│       │   ├── main_window_init.py   # Main UI initialization
+│       │   ├── main_window_functions.py  # Core application logic
+│       │   ├── image_viewer.py       # Multi-planar image display
+│       │   └── windowing_tool.py     # Medical windowing controls
+│       └── visualization/            # 3D visualization modules
+│           ├── __init__.py
+│           ├── mayavi_widget.py      # 3D visualization component
+│           └── enhanced_mayavi_widget.py  # Advanced density visualization
+├── tests/                            # Test suite
+│   ├── __init__.py
+│   └── test_core.py                  # Core module tests
+├── docs/                             # Documentation
+├── scripts/                          # Utility scripts
+│   └── run_app.py                    # Application launcher script
+└── data/                             # Sample CT data (not in repo)
 ```
 
 ## Dependencies
@@ -207,8 +264,8 @@ Contributions are welcome! This project is particularly suitable for:
 If you use this software in your research or clinical work, please cite:
 
 ```
-[Author Name]. "Patient-Specific 3D Model Generation for Preoperative Planning." 
-MSc Thesis, Biomedical Engineering, [University Name], 2024.
+Dawit F Welegebriel. "Patient-Specific 3D Model Generation for Preoperative Planning." 
+MSc Thesis, Biomedical Engineering, University of Patras, 2024.
 ```
 
 ## Medical Disclaimer
