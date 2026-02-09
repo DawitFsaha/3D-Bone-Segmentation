@@ -133,7 +133,7 @@ Note: pip installation of Mayavi may fail on Windows due to VTK build issues.
 ## Usage
 
 ### Loading Medical Data
-1. **Import Dataset**: Use "Import CT|MRI Dataset" button or File menu
+1. **Import Dataset**: Use "Import CT scan Dataset" button or File menu
 2. **Select DICOM Series**: Choose from multiple series if available
 3. **Navigate Slices**: Use scrollbars to explore different anatomical planes
 
