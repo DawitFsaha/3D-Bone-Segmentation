@@ -80,7 +80,7 @@ One of the most valuable features is the software's ability to **automatically c
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/3D-Bone-Segmentation.git
+   git clone https://github.com/DawitFsaha/3D-Bone-Segmentation.git
    cd 3D-Bone-Segmentation
    ```
 
