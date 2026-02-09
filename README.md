@@ -2,8 +2,6 @@
 
 A comprehensive medical imaging application developed as part of an MSc thesis in Biomedical Engineering, enabling surgeons to create patient-specific 3D bone models from CT scans for enhanced preoperative planning and surgical training.
 
-## Screenshots
-
 ## 🎓 Academic Background
 
 This software was developed as the core component of a Master's thesis in **Biomedical Engineering** with the topic:
@@ -58,6 +56,8 @@ One of the most valuable features is the software's ability to **automatically c
 - **3D Printing Ready**: Optimized for transparent materials to visualize internal structures
 - **Clinical Scale**: Tested with medium bone fractures up to 30 cm dimensions
 - **Processed Data**: Export with applied windowing, thresholding, and ROI selections
+
+## Screenshots
 
 ### Application Interface
 ![Application UI](docs/UI.png)
